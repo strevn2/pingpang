@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.course.module.mapper.ArticleMapper">
+
+    <!-- 查询教程列表 -->
+    <select id="list" resultType="org.course.module.entity.Article">
+        SELECT
+        id,
+        coverImgs,
+        title
+        FROM article
+        WHERE is_deleted = 0
+        ORDER BY id ASC
+    </select>
+
+    <!-- 查询教程详情 -->
+    <select id="detail"
+            parameterType="java.lang.Long"
+            resultType="org.course.module.entity.Article">
+        SELECT
+        id,
+        coverImgs,
+        title,
+        sub_title,
+        content,
+        recommend,
+        price
+        FROM article
+        WHERE id = #{tutorialId}
+        AND is_deleted = 0
+    </select>
+    <!-- 教程新增 -->
+    <insert id="insert"
+            parameterType="org.course.module.entity.Article">
+        INSERT INTO article (
+        cover_imgs,
+        title,
+        sub_title,
+        content,
+        recommend,
+        price,
+        create_time,
+        update_time,
+        is_deleted
+        )
+        VALUES (
+        #{coverImgs},
+        #{title},
+        #{subTitle},
+        #{content},
+        #{recommend},
+        #{price},
+        UNIX_TIMESTAMP(),
+        UNIX_TIMESTAMP(),
+        0
+        )
+    </insert>
+    <!-- 教程修改 -->
+    <update id="update"
+            parameterType="org.course.module.entity.Article">
+        UPDATE article
+        SET
+        cover_imgs = #{coverImgs},
+        title = #{title},
+        sub_title = #{subTitle},
+        content = #{content},
+        recommend = #{recommend},
+        price = #{price},
+        update_time = UNIX_TIMESTAMP()
+        WHERE id = #{id}
+        AND is_deleted = 0
+    </update>
+    <!-- 教程删除：逻辑删除 -->
+    <update id="delete"
+            parameterType="java.lang.Long">
+        UPDATE article
+        SET
+        is_deleted = 1,
+        update_time = UNIX_TIMESTAMP()
+        WHERE id = #{tutorialId}
+        AND is_deleted = 0
+    </update>
+</mapper>
