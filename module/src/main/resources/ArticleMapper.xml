@@ -9,7 +9,7 @@
     <select id="list" resultType="org.course.module.entity.Article">
         SELECT
         id,
-        coverImgs,
+        cover_imgs,
         title
         FROM article
         WHERE is_deleted = 0
@@ -22,7 +22,7 @@
             resultType="org.course.module.entity.Article">
         SELECT
         id,
-        coverImgs,
+        cover_imgs,
         title,
         sub_title,
         content,
