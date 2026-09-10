@@ -1,4 +1,4 @@
-package org.course.app.domain;
+package org.course.pingpang.app.domain;
 
 import lombok.Data;
 

@@ -1,6 +1,6 @@
-package org.course.module.service;
+package org.course.pingpang.module.service;
 
-import org.course.module.entity.Article;
+import org.course.pingpang.module.entity.Article;
 
 import java.util.List;
 

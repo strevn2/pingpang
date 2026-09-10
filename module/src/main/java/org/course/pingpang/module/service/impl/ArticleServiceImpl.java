@@ -1,8 +1,8 @@
-package org.course.module.service.impl;
+package org.course.pingpang.module.service.impl;
 
-import org.course.module.entity.Article;
-import org.course.module.mapper.ArticleMapper;
-import org.course.module.service.ArticleService;
+import org.course.pingpang.module.entity.Article;
+import org.course.pingpang.module.mapper.ArticleMapper;
+import org.course.pingpang.module.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

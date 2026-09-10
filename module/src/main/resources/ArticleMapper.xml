@@ -3,10 +3,10 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="org.course.module.mapper.ArticleMapper">
+<mapper namespace="org.course.pingpang.module.mapper.ArticleMapper">
 
     <!-- 查询教程列表 -->
-    <select id="list" resultType="org.course.module.entity.Article">
+    <select id="list" resultType="org.course.pingpang.module.entity.Article">
         SELECT
         id,
         cover_imgs,
@@ -19,7 +19,7 @@
     <!-- 查询教程详情 -->
     <select id="detail"
             parameterType="java.lang.Long"
-            resultType="org.course.module.entity.Article">
+            resultType="org.course.pingpang.module.entity.Article">
         SELECT
         id,
         cover_imgs,
@@ -34,7 +34,7 @@
     </select>
     <!-- 教程新增 -->
     <insert id="insert"
-            parameterType="org.course.module.entity.Article">
+            parameterType="org.course.pingpang.module.entity.Article">
         INSERT INTO article (
         cover_imgs,
         title,
@@ -60,7 +60,7 @@
     </insert>
     <!-- 教程修改 -->
     <update id="update"
-            parameterType="org.course.module.entity.Article">
+            parameterType="org.course.pingpang.module.entity.Article">
         UPDATE article
         SET
         cover_imgs = #{coverImgs},

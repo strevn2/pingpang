@@ -1,8 +1,8 @@
-package org.course.console.controller;
+package org.course.pingpang.console.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.course.module.entity.Article;
-import org.course.module.service.ArticleService;
+import org.course.pingpang.module.entity.Article;
+import org.course.pingpang.module.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

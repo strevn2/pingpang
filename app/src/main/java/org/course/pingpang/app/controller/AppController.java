@@ -1,11 +1,11 @@
-package org.course.app.controller;
+package org.course.pingpang.app.controller;
 
 import lombok.extern.slf4j.Slf4j;
-import org.course.app.domain.ArticleDetailVO;
-import org.course.app.domain.ArticleListItemVO;
-import org.course.app.domain.ArticleListVO;
-import org.course.module.entity.Article;
-import org.course.module.service.ArticleService;
+import org.course.pingpang.app.domain.ArticleDetailVO;
+import org.course.pingpang.app.domain.ArticleListItemVO;
+import org.course.pingpang.app.domain.ArticleListVO;
+import org.course.pingpang.module.entity.Article;
+import org.course.pingpang.module.service.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

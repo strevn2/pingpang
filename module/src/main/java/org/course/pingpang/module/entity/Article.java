@@ -1,4 +1,4 @@
-package org.course.module.entity;
+package org.course.pingpang.module.entity;
 
 import lombok.Data;
 

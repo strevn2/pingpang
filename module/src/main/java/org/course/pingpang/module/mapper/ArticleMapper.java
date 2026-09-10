@@ -1,8 +1,8 @@
-package org.course.module.mapper;
+package org.course.pingpang.module.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.course.module.entity.Article;
+import org.course.pingpang.module.entity.Article;
 
 import java.util.List;
 
